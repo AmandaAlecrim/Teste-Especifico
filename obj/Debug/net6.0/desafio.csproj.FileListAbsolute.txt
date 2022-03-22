@@ -25,3 +25,11 @@ D:\Meus Documentos\Desktop\desafio\obj\Debug\net6.0\refint\desafio.dll
 D:\Meus Documentos\Desktop\desafio\obj\Debug\net6.0\desafio.pdb
 D:\Meus Documentos\Desktop\desafio\obj\Debug\net6.0\desafio.genruntimeconfig.cache
 D:\Meus Documentos\Desktop\desafio\obj\Debug\net6.0\ref\desafio.dll
+D:\Meus Documentos\Desktop\desafio\bin\Debug\net6.0\Humanizer.dll
+D:\Meus Documentos\Desktop\desafio\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.dll
+D:\Meus Documentos\Desktop\desafio\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\Meus Documentos\Desktop\desafio\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\Meus Documentos\Desktop\desafio\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\Meus Documentos\Desktop\desafio\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
+D:\Meus Documentos\Desktop\desafio\bin\Debug\net6.0\Npgsql.dll
+D:\Meus Documentos\Desktop\desafio\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

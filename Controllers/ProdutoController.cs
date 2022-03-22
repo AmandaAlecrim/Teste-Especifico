@@ -10,16 +10,16 @@ namespace desafio.Controllers
         private static List<Produto> Produtos()
         {
             return new List<Produto>{
-                new Produto{Id = 1, NomeProduto = "Macarrão", Preco = 3.89}
+                new Produto{Id = 1, NomeProduto = "Macarrão", Preco = 3.80}
             };
         }
-        [HttpGet]
+        [HttpGet]//método GET
         public IActionResult Get()
         {
             return Ok(Produtos());
         }
 
-        [HttpPost]
+        [HttpPost]//método POST
         public IActionResult Post(Produto produto)
         {
             var produtos = Produtos();
