@@ -1,5 +1,6 @@
 using desafio.Model;
 using desafio.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace desafio.Repository
 {
@@ -12,34 +13,40 @@ namespace desafio.Repository
         {
             _context = context;
         }
+
+        public async Task<IEnumerable<Produto>> BuscaProdutos()
+        {
+            return await _context.Produtos.ToListAsync();
+        }
+
+        public async Task<Produto> BuscaProduto(int id)
+        {
+            return await _context.Produtos.Where(x => x.Id == id).FirstOrDefaultAsync();
+        }
+
         public void AdicionaProduto(Produto produto)
         {
-            throw new NotImplementedException();
+            _context.Add(produto);
         }
 
         public void AtualizaProduto(Produto produto)
         {
-            throw new NotImplementedException();
+            _context.Update(produto);
         }
-
-        public Task<Produto> BuscaProduto(int id)
+        public void DeletaProduto(Produto produto)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Produto>> BuscaProdutos()
+        public async Task<bool> SaveChangesAsync()
+        //Retorna true se o documento for salvo com sucesso, caso contrário retorna false
         {
-            throw new NotImplementedException();
+            return await _context.SaveChangesAsync() > 0;
         }
 
         public void DeleteProduto(Produto produto)
         {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> SaveChangesAsync()
-        {
-            throw new NotImplementedException();
+            _context.Remove(produto);
         }
     }
 }
