@@ -18,5 +18,13 @@ namespace desafio.Controllers
         {
             return Ok(Produtos());
         }
+
+        [HttpPost]
+        public IActionResult Post(Produto produto)
+        {
+            var produtos = Produtos();
+            produtos.Add(produto);
+            return Ok(produtos);
+        }
     }
 }
