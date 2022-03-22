@@ -1,5 +1,5 @@
 using desafio.Data;
-//using desafio.Repository;
+using desafio.Repository;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +15,8 @@ builder.Services.AddDbContext<ProdutoContext>(options =>
 {
     options.UseNpgsql(builder.Configuration.GetConnectionString("Default"));
 });
+
+builder.Services.AddScoped<IProdutoRepository, ProdutoRepository>();
 
 var app = builder.Build();
 

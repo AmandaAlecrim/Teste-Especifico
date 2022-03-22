@@ -7,6 +7,7 @@ namespace desafio.Controllers
     [Route("api/[controller]")]
     public class ProdutoController : ControllerBase
     {
+
         private static List<Produto> Produtos()
         {
             return new List<Produto>{
