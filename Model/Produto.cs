@@ -4,7 +4,7 @@ namespace desafio.Model
     public class Produto
     {
         public int Id { get; set; }
-        public string Nome { get; set; }
+        public string NomeProduto { get; set; }
         public double Preco { get; set; }
     }
 }

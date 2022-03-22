@@ -7,10 +7,16 @@ namespace desafio.Controllers
     [Route("api/[controller]")]
     public class ProdutoController : ControllerBase
     {
-        [HttpGet]
-        public string Get()
+        private static List<Produto> Produtos()
         {
-            return "Ok";
+            return new List<Produto>{
+                new Produto{Id = 1, NomeProduto = "Macarrão", Preco = 3.89}
+            };
+        }
+        [HttpGet]
+        public IActionResult Get()
+        {
+            return Ok(Produtos());
         }
     }
 }
