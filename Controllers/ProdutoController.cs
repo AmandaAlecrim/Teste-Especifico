@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using desafio.Model;
+using desafio.Repository;
 
 namespace desafio.Controllers
 {
@@ -7,13 +8,13 @@ namespace desafio.Controllers
     [Route("api/[controller]")]
     public class ProdutoController : ControllerBase
     {
+        private readonly IProdutoRepository _repository;
 
-        private static List<Produto> Produtos()
+        public ProdutoController(IProdutoRepository repository)
         {
-            return new List<Produto>{
-                new Produto{Id = 1, NomeProduto = "Macarrão", Preco = 3.80}
-            };
+            _repository = repository;
         }
+
         [HttpGet]//método GET
         public IActionResult Get()
         {

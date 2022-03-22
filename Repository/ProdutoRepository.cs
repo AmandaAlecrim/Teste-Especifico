@@ -1,10 +1,17 @@
 using desafio.Model;
+using desafio.Data;
 
 namespace desafio.Repository
 {
     //implementação da interface
     public class ProdutoRepository : IProdutoRepository
     {
+        private readonly ProdutoContext _context;
+
+        public ProdutoRepository(ProdutoContext context)
+        {
+            _context = context;
+        }
         public void AdicionaProduto(Produto produto)
         {
             throw new NotImplementedException();
